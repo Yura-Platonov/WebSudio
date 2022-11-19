@@ -12,14 +12,14 @@
         color: getColor(primary-title);
     }
 
-    &__list {
-        display: flex;
-        gap: 30px;
-    }
+    // &__list {
+    //     display: flex;
+    //     gap: 30px;
+    // }
 
-    &__item {
-        width: calc((1170% - 150px)/6);
-        }
+    // &__item {
+    //     width: calc((1170% - 150px)/6);
+    //     }
 
     &__link {
         display: flex;
