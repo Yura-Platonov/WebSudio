@@ -1,78 +1,149 @@
 .auth-nav {
-    display: flex;
     @media screen and (max-width:767px) {
-    flex-direction: column-reverse;
-    gap: 32px;
-    padding-bottom: 32px;
-}
-
-    &__link {
-        // display: flex;
-        // align-items: center;
-        // gap: 10px;
-        // padding-top: 32px;
-        // padding-bottom: 32px;
-        
+        &{display: none;}
+    &--mobile{  
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 32px;
+        padding-bottom: 32px;
+    }
+    &__link--mobile{
+        color: getColor(primary-text);
+        font-size: 24px;
+        line-height: 1.16;
+    }
+    &__link-accent--mobile{
         color: getColor(accent);
-        font-weight: 500;
         font-size: 34px;
         line-height: 1.18;
-        letter-spacing: 0.02em;
-        }
-    &__icon{
+    }
+    &__icon--mobile{
         display: none;
     }
-
-    @media screen and (max-width: 767px) {
-        &__link--mobile{
-            color: getColor(primary-text);
-            font-size: 24px;
-            line-height: 1.16;
-        }
-        
-    }
+}
     @media screen and (min-width:768px) {
+        display: flex;
         flex-direction: column;
         gap: 10px;
         padding: 21px 0;
         
 
-    &__link{
-        color: getColor(primary-text);
-        font-size: 14px;
-        line-height: 1.14;
-        
-        transition: color 250ms getAnimation(cub);}
+        &__link{
+            display: flex;
+            align-items: center;
+            gap:8px;
 
-    &__link:hover, &__link:focus { 
-        color: getColor(accent);
-    }
-
-    &__link:hover &__icon, &__link:focus &__icon { 
-        fill: getColor(accent);
-    }
-
-    &__icon{
-        display: block;
-        fill: getColor(primary-text);
-        transition: fill 250ms getAnimation(cub);
-    }
-
-    }
-        
-    @media screen and (min-width:1200px) {
-    flex-direction: row;
-
-    &__link {
-    align-items: center;
+            color: getColor(primary-text);
+            font-size: 12px;
+            line-height: 1.16;
+            
+            transition: color 250ms getAnimation(cub);}
     
-    padding-top: 32px;
-    padding-bottom: 32px;
+        &__link:hover, &__link:focus { 
+            color: getColor(accent);
+        }
     
+        &__link:hover &__icon, &__link:focus &__icon { 
+            fill: getColor(accent);
+        }
+    
+        &__icon{
+            
+            fill: getColor(primary-text);
+            transition: fill 250ms getAnimation(cub);
+        }
+        
     }
+        @media screen and (min-width:1200px) {
+            flex-direction: row;
+        
+            &__link {
+            font-size: 14px;
+            line-height: 1.12;  
+            align-items: center;
+            
+            padding-top: 32px;
+            padding-bottom: 32px;
+            
+            }
+        
+            }
+        }
+    
+        // display: flex;
+    // @media screen and (max-width:767px) {
+    // flex-direction: column-reverse;
+    // gap: 32px;
+    // padding-bottom: 32px;
 
-    }
-    }
+
+    // &__link {
+    //     // display: flex;
+    //     // align-items: center;
+    //     // gap: 10px;
+    //     // padding-top: 32px;
+    //     // padding-bottom: 32px;
+        
+    //     color: getColor(accent);
+    //     font-weight: 500;
+    //     font-size: 34px;
+    //     line-height: 1.18;
+    //     letter-spacing: 0.02em;
+    //     }
+    // &__icon{
+    //     display: none;
+    // }
+
+    // @media screen and (max-width: 767px) {
+    //     &__link--mobile{
+    //         color: getColor(primary-text);
+    //         font-size: 24px;
+    //         line-height: 1.16;
+    //     }
+        
+    // }
+    // @media screen and (min-width:768px) {
+    //     flex-direction: column;
+    //     gap: 10px;
+    //     padding: 21px 0;
+        
+
+    // &__link{
+    //     color: getColor(primary-text);
+    //     font-size: 14px;
+    //     line-height: 1.14;
+        
+    //     transition: color 250ms getAnimation(cub);}
+
+    // &__link:hover, &__link:focus { 
+    //     color: getColor(accent);
+    // }
+
+    // &__link:hover &__icon, &__link:focus &__icon { 
+    //     fill: getColor(accent);
+    // }
+
+    // &__icon{
+    //     display: block;
+    //     fill: getColor(primary-text);
+    //     transition: fill 250ms getAnimation(cub);
+    // }
+
+    // }
+        
+    // @media screen and (min-width:1200px) {
+    // flex-direction: row;
+
+    // &__link {
+    // align-items: center;
+    
+    // padding-top: 32px;
+    // padding-bottom: 32px;
+    
+    // }
+
+    // }
+    // }
     
     
 

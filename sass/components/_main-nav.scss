@@ -1,9 +1,30 @@
 .main-nav {
+    @media screen and (max-width:767px) {
+        &{display: none;}
+    &--mobile{  
         display: flex;
-        @media screen and (max-width:767px) {
         flex-direction: column;
-        gap: 32px;}
+        gap: 32px;
+    }
+    &__link--mobile{
+        color: getColor(primary-title);
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
 
+        transition: color 250ms getAnimation(cub);
+        }
+
+    &__link--mobile:hover, &__link--mobile:focus {
+        color: getColor(accent);}
+    
+    }
+    
+    @media screen and (min-width:768px) {
+        
+        display: flex;
+        
         &__link{
             color: getColor(primary-title);
             font-weight: 500;
@@ -19,8 +40,6 @@
     
         &__link:hover, &__link:focus {
             color: getColor(accent);}
-        
-    @media screen and (min-width:768px) {
         
         & &__item:not(:last-child) {
             margin-right: 50px;}
