@@ -1,43 +1,58 @@
 .main-nav {
-    & &__item:not(:last-child) {
-        margin-right: 50px;}
+        display: flex;
+        @media screen and (max-width:767px) {
+        flex-direction: column;
+        gap: 32px;}
 
-    &__link{
-        position: relative;
-        padding-top: 32px;
-        padding-bottom: 32px;
-
-        color: getColor(primary-title);
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 1.14;
-        letter-spacing: 0.02em;
-
-        transition: color 250ms getAnimation(cub);
+        &__link{
+            color: getColor(primary-title);
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 1.17;
+            letter-spacing: 0.02em;
+    
+            transition: color 250ms getAnimation(cub);
+            }
+        &__link:hover::after{
+            transform: scaleX(1);
         }
     
-    &__link::after{
-        position: absolute;
-        content: '';
-        left: 0;
-        bottom: 0;
-        transform: scaleX(0);
-        transition: transform 250ms getAnimation(cub);
-            
-        width: 100%;
-        height: 4px;
-    
-        background-color: #2196F3;
-        border-radius: 2px;
-    }
-
-    &__link:hover::after{
-        transform: scaleX(1);
-    }
-
-    &__link:hover, &__link:focus {
-        color: getColor(accent);}
+        &__link:hover, &__link:focus {
+            color: getColor(accent);}
         
+    @media screen and (min-width:768px) {
+        
+        & &__item:not(:last-child) {
+            margin-right: 50px;}
+    
+        &__link{
+            position: relative;
+            padding-top: 32px;
+            padding-bottom: 32px;
+    
+            font-size: 14px;
+            line-height: 1.14;
+            }
+        
+        &__link::after{
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            transform: scaleX(0);
+            transition: transform 250ms getAnimation(cub);
+                
+            width: 100%;
+            height: 4px;
+        
+            background-color: #2196F3;
+            border-radius: 2px;
+        }
+    }
+
+    // @media screen and (min-width:1200px) {
+    
+    // }
 }
 
 .link-current {

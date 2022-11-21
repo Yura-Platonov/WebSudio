@@ -1,20 +1,27 @@
 .header{
+        position: relative;
         border-bottom: 1px solid #ECECEC;
 
+
     &-nav{
+        
         display: flex; 
         align-items: center;
-        justify-content: space-between;
+        @media screen and (max-width:767px) {
+            justify-content: space-between;
+        }
         }
 
     &__logo{
-        margin-right: 93px;
         color: getColor(accent);
         font-size: 26px;
         line-height: 1.19;
         font-family: "Raleway", sans-serif;
         font-weight: 700;
         
+    @media screen and (min-width:768px) {
+        margin-right: 90px;
+    }
     }
 
     &__logo-accent{
@@ -22,6 +29,83 @@
     }
 
     .flex &__logo{
-        padding: 24px 0 25px 0;
+        padding: 16px 0;
+        
+        
+        @media screen and (min-width: 768px){
+            padding: 26px 0 26px 0;
+        }
+
+        @media screen and (min-width: 1200px){
+            padding: 24px 0 25px 0;
+        }
+        }
+}
+
+.menu-button{
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    z-index: 1;
+
+    transition: fill 250ms getAnimation(cub);
+
+    &:hover, &:focus{
+        fill: getColor(accent);
+    }
+    
+    
+    & .icon-menu{
+    display: none;
+    }
+
+    &.is-open .icon-menu{
+        display: block;
+    } 
+
+    &.is-open .icon-close-menu{
+        display: none;
+    }
+
+    @media screen and (min-width:768px) {
+        &{display: none;}
+
+        & .icon-menu{
+            display: block;
+            }
     }
 }
+
+.menu-container{
+    @media screen and (max-width:767px) {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 796px;
+
+    padding: 48px 40px;
+    background-color: getColor(primary-white);
+
+    &.is-open{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    @media screen and (min-width:768px){
+        &{
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+    }
+
+    
+}
+}
+
+
