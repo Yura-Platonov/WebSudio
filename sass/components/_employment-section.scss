@@ -1,8 +1,11 @@
 .employment-section{
-        @media screen and (max-width: 767px) {
-            display: none;
-            }
-        padding-bottom: 94px;
+    @media screen and (max-width: 1200px) {
+        display: none;
+        }
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        }
+    padding-bottom: 94px;
 
     &__title{
         margin-bottom: 50px;
@@ -13,9 +16,9 @@
         
         color: getColor(primary-title)}
 
-    // &__list{
-    //     display: flex;
-    //     }
+    &__list{
+        display: flex;
+        }
 
     &__item:not(:last-child){
         margin-right: 30px;

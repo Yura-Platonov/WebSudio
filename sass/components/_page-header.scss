@@ -8,8 +8,11 @@
         display: flex; 
         align-items: center;
         gap:  85px;
-        @media screen and (max-width:767px) {
+        @media screen and (max-width:768px) {
             justify-content: space-between;
+        }
+        @media screen and (min-width:1200px) {
+            gap: 305px;
         }
         }
 
@@ -22,6 +25,9 @@
         
     @media screen and (min-width:768px) {
         margin-right: 85px;
+    }
+    @media screen and (min-width:1200px) {
+        margin-right: 95px;
     }
     }
 
@@ -81,7 +87,7 @@
 
 .menu-container{
     display: none;
-    @media screen and (max-width:767px) {
+    @media screen and (max-width:768px) {
     position: absolute;
     top: 0;
     left: 0;
