@@ -1,26 +1,26 @@
 .clients-section {
-        padding-top: 94px;
-        padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 
     &__title {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         
         text-align: center;
         font-weight: 700;
-        font-size: 36px;
-        line-height: 1.16;
+        font-size: 28px;
+        line-height: 1.14;
         color: getColor(primary-title);
     }
 
-    // &__list {
-    //     display: flex;
-    //     gap: 30px;
-    // }
-
-    // &__item {
-    //     width: calc((1170% - 150px)/6);
-    //     }
-
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;}
+    
+    &__item{
+        width: calc((100% - 4 * 15px) / 2);
+        margin:  15px;}
+    
     &__link {
         display: flex;
         justify-content: center;
@@ -47,4 +47,36 @@
         transition: fill 250ms getAnimation(cub);
     }
 
+    @media screen and (min-width: 768px){
+        &__list{
+            display: flex;
+            flex-wrap: wrap;
+            margin: -15px;}
+    
+        &__item{
+            width: calc((100% - 6 * 15px) / 3);
+            margin:  15px;}
+        }
+    
+        
+    
+    @media screen and (min-width:1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+
+        &__title{
+            margin-bottom: 50px;
+        
+            font-size: 36px;
+            line-height: 1.16;
+        }
+        &__list{
+            flex-wrap: nowrap;
+            margin: 0;
+            gap: 30px;}
+
+        &__item{
+            margin:  0px;
+        }
+    }
 }

@@ -1,8 +1,19 @@
 
 .footer-container{
-    // display: flex;
-    // align-items: baseline;
-    // gap: 70px;
+    display: flex;
+     // flex-direction: column;
+    
+    @media screen and (max-width:1200px) {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 60px;
+        }
+    
+    @media screen and (min-width:1200px) {
+        align-items: baseline;
+        justify-content: space-between;
+        }
+    
 }
 
 
@@ -11,9 +22,11 @@
     padding: 60px 0;
 
     &__nav {
+        display: block;
         font-weight: 400;
         font-size: 14px;
         line-height: 1.7;
+        text-align: center;
         color: rgba(255, 255, 255, 0.6);
         
         transition: color 250ms getAnimation(cub);
@@ -33,7 +46,8 @@
 
     &__logo {
         display: block;
-        margin-bottom: 20px;
+        margin-bottom: 28px;
+        text-align: center;
     
         color: getColor(accent);
         font-size: 26px;
@@ -53,7 +67,9 @@
     }
 
     &__link-title{
-        padding-bottom: 20px;
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
         
         font-weight: 700;
         font-size: 14px;
@@ -65,8 +81,10 @@
 
     &__contacts{
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         flex-direction: column;
-        gap: 9px;
+        gap: 12px;
         }
     
     &__net-list{
@@ -84,7 +102,7 @@
 
         background-color: rgba(255, 255, 255, 0.1);
         border-radius: 50%;
- 
+
         transition: background-color 250ms getAnimation(cub);
         }
 
@@ -96,11 +114,32 @@
     &__net-icon{
         fill: getColor(primary-white)
     }
+    
+    @media screen and (min-width:768px) {
+        &__link-title{
+            margin-top: 5px;
+        }
+    }
+    
+    @media screen and (min-width:1200px) {
+        &__logo {
+            text-align: left;}
+
+        &__nav{
+            text-align: left;
+        }
+
+        &__link-title{
+            text-align: left;
+            margin-top: 0;
+            }
+    }
+    
 }
 
 
-.footer-link{
-    padding-top: 12px;
-}
+// .footer-link{
+//     padding-top: 12px;
+// }
 
 address{font-style: normal;}

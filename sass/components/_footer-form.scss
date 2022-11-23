@@ -1,12 +1,16 @@
 .footer{
     &__form{
-        // display: flex;
-        // gap: 12px;
+        
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
     }
-
+    
     &__input{
-        // width: 358px;
-        // height: 50px;
+        // width: 450px;
+        height: 50px;
         
         padding: 15px 16px;
                 
@@ -49,6 +53,25 @@
         fill: getColor(primary-white);
     }
 
+    @media screen and (min-width:768px) {
+        &__input{
+            width: 450px;
+            }
+        &__address{
+            margin-right: 105px;
+        }
+    }
+    @media screen and (min-width:1200px) {
+        &__form{
+            flex-direction: row;
+        }
+        &__input{
+        width: 358px;
+        }
+        &__address{
+            margin-right: 0;
+        }
+    }
 }
 
 input:-webkit-autofill,
