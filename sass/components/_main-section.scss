@@ -2,31 +2,55 @@
         padding-top: 118px;
         padding-bottom: 118px;
             
-        @media screen and (min-width: 1200px){
-            padding-top: 200px;
-            padding-bottom: 200px;
-            }
-        
-
         text-align: center;
 
         background-color:#C4C4C4;
-        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-optimized.jpg);
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero-bg-mobile-min.jpg);
         background-repeat: no-repeat;
         background-position: 50% 50%;
-        max-width: 1600px;
+        max-width: 480px;
         margin: 0 auto;
         background-size: cover;
+
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            & {
+            background-image:linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),  url('../../images/hero-bg-mobile@2x-min.jpg');
+            }}
+
+        @media screen and (min-width: 768px){
+            max-width: 768px;
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero-bg-tablet-min.jpg);
+        
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            & {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero-bg-tablet@2x-min.jpg);
+        }}
+        }
+        
+        @media screen and (min-width: 1200px){
+            padding-top: 200px;
+            padding-bottom: 200px;
+
+            max-width: 1600px;
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero-bg-desctop-min.jpg);
+        
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            & {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero-bg-desctop@2x-min.jpg);
+        }}
+        }
 
     &__button{
         margin-top: 30px;
         padding: 10px 24px;
         border: 0;
         
-        @media screen and (min-width: 1200px){
-            padding: 10px 32px;
-            }
-
         color: getColor(primary-white);
         background-color: getColor(accent);
         font-family: inherit;
@@ -39,12 +63,17 @@
         cursor: pointer; 
         
         transition: background-color 250ms getAnimation(cub);
+
+        @media screen and (min-width: 1200px){
+            padding: 10px 32px;
+            }
         }
 
     &__button:hover, &__button:focus {
         background-color: #188CE8;
     }
 }
+
 
 h1{
         text-align: center;

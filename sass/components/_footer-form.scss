@@ -1,15 +1,17 @@
 .footer{
-    &__form{
+    // &__form{
         
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-    }
+    //     display: flex;
+    //     flex-wrap: wrap;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     gap: 12px;
+    // }
     
     &__input{
-        // width: 450px;
+        display: block;
+        max-width: 450px;
+        width: 100%;
         height: 50px;
         
         padding: 15px 16px;
@@ -22,9 +24,12 @@
         }
 
     &__form-button{
+        
         display: flex;
         align-items: center;
         gap: 10px;
+        margin-right: auto;
+        margin-left: auto;
 
         padding: 10px 28px;
         border: 0;
@@ -53,24 +58,33 @@
         fill: getColor(primary-white);
     }
 
+    @media screen and (max-width: 1199px){
+    &__input {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;}
+    }
+
     @media screen and (min-width:768px) {
-        &__input{
-            width: 450px;
-            }
-        &__address{
-            margin-right: 105px;
-        }
+        // &__input{
+        //     width: 450px;
+        //     }
+        // &__address{
+        //     margin-right: 105px;
+        // }
     }
     @media screen and (min-width:1200px) {
         &__form{
-            flex-direction: row;
+            display: flex;
+            align-items: center;
         }
         &__input{
         width: 358px;
+        margin-right: 12px;
         }
-        &__address{
-            margin-right: 0;
-        }
+    //     &__address{
+    //         margin-right: 0;
+    //     }
     }
 }
 
