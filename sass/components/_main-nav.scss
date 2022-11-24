@@ -57,7 +57,7 @@
             position: absolute;
             content: '';
             left: 0;
-            bottom: 0;
+            bottom: -0.5px;
             transform: scaleX(0);
             transition: transform 250ms getAnimation(cub);
                 

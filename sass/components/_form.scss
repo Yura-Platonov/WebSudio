@@ -1,5 +1,4 @@
 .form{
-        width: 528px;
         padding: 40px;
 }
 
@@ -118,7 +117,10 @@ textarea{
     }
 
     &__label{
-        padding-left: 37px;
+
+        font-size: 12px;
+        line-height: 1.16;
+        padding-left: 35px;
     }
 
     &__input:checked + &__icon{

@@ -320,31 +320,55 @@
           <h2 class="employment-section__title">Чим ми займаємося</h2>
           <ul class="list employment-section__list">
             <li class="employment-section__item">
-              <img
-                src="images/pic1.jpg"
-                alt="рука пише на клавіатурі"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/employment-desctop-1-min.jpg    1x,
+                    ./images/employment-desctop-1@2x-min.jpg 2x
+                  "
+                />
+                <img
+                  loading="lazy"
+                  src="./images/employment-desctop-1-min.jpg"
+                  alt="рука пише на клавіатурі"
+                />
+              </picture>
               <div class="employment-section__text">
                 <h3 class="employment-section__subtitle">Десктопні додатки</h3>
               </div>
             </li>
             <li class="employment-section__item">
-              <img
-                src="images/pic2.jpg"
-                alt="рука тримає телефон"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/employment-desctop-2-min.jpg    1x,
+                    ./images/employment-desctop-2@2x-min.jpg 2x
+                  "
+                />
+                <img
+                  loading="lazy"
+                  src="./images/employment-desctop-2-min.jpg"
+                  alt="рука тримає телефон"
+                />
+              </picture>
               <div class="employment-section__text">
                 <h3 class="employment-section__subtitle">Мобільні додатки</h3>
               </div>
             </li>
             <li class="employment-section__item">
-              <img
-                src="images/pic3.jpg"
-                alt="рука тримає планшет"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/employment-desctop-3-min.jpg    1x,
+                    ./images/employment-desctop-3@2x-min.jpg 2x
+                  "
+                />
+                <img
+                  loading="lazy"
+                  src="./images/employment-desctop-3-min.jpg"
+                  alt="рука тримає планшет"
+                />
+              </picture>
               <div class="employment-section__text">
                 <h3 class="employment-section__subtitle">
                   Дизайнерські рішення
@@ -360,19 +384,34 @@
           <h2 class="team-section__title">Наша команда</h2>
           <ul class="list team-section__list">
             <li class="team-section__item">
-              <img
-                srcset="
-                product-designer-mobile-min.jpg 450w,
-                product-designer-mobile@2x-min.jpg 900w,
-                product-designer-tablet-min.jpg 354w,
-                product-designer-tablet@2x-min.jpg 708w, 
-                product-designer-desctop-min.jpg 270w,
-                product-designer-desctop@2x-min.jpg 540w,
-                "
-                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
-                src="./images/product-designer-mobile-min.jpg"
-                alt="чоловік в окулярах"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/product-designer-mobile-min.jpg    1x,
+                    ./images/product-designer-mobile@2x-min.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/product-designer-tablet-min.jpg    1x,
+                    ./images/product-designer-tablet@2x-min.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/product-designer-desctop-min.jpg    1x,
+                    ./images/product-designer-desctop@2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  loading="lazy"
+                  src="./images/product-designer-mobile-min.jpg"
+                  alt="чоловік в окулярах"
+                />
+              </picture>
               <h3 class="team-section__subtitle">Ігор Дем'яненко</h3>
               <p class="team-section__text">Product Designer</p>
               <ul class="net-list list">
@@ -411,7 +450,34 @@
               </ul>
             </li>
             <li class="team-section__item">
-              <img src="images/Person2.jpg" alt="жінка в окулярах" width="" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/frontend-dev-mobile-min.jpg    1x,
+                    ./images/frontend-dev-mobile@2x-min.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/frontend-dev-tablet-min.jpg    1x,
+                    ./images/frontend-dev-tablet@2x-min.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/frontend-dev-desctop-min.jpg    1x,
+                    ./images/frontend-dev-desctop@2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  loading="lazy"
+                  src="./images/frontend-dev-mobile-min.jpg"
+                  alt="жінка в окулярах"
+                />
+              </picture>
               <h3 class="team-section__subtitle">Ольга Рєпіна</h3>
               <p class="team-section__text">Frontend Developer</p>
               <ul class="net-list list">
@@ -450,11 +516,34 @@
               </ul>
             </li>
             <li class="team-section__item">
-              <img
-                src="images/Person3.jpg"
-                alt="чоловік посміхається"
-                width=""
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/marketing-mobile-min.jpg    1x,
+                    ./images/marketing-mobile@2x-min.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/marketing-tablet-min.jpg    1x,
+                    ./images/marketing-tablet@2x-min.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/marketing-desctop-min.jpg    1x,
+                    ./images/marketing-desctop@2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  loading="lazy"
+                  src="./images/marketing-mobile-min.jpg"
+                  alt="чоловік посміхається"
+                />
+              </picture>
               <h3 class="team-section__subtitle">Микола Тарасов</h3>
               <p class="team-section__text">Marketing</p>
               <ul class="net-list list">
@@ -493,11 +582,34 @@
               </ul>
             </li>
             <li class="team-section__item">
-              <img
-                src="images/Person4.jpg"
-                alt="чоловік в окулярах посміхається"
-                width=""
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/ui-mobile-min.jpg    1x,
+                    ./images/ui-mobile@2x-min.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/ui-tablet-min.jpg    1x,
+                    ./images/ui-tablet@2x-min.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/ui-desctop-min.jpg    1x,
+                    ./images/ui-desctop@2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  loading="lazy"
+                  src="./images/ui-mobile-min.jpg"
+                  alt="чоловік в окулярах посміхається"
+                />
+              </picture>
               <h3 class="team-section__subtitle">Михайло Єрмаков</h3>
               <p class="team-section__text">UI Designer</p>
               <ul class="net-list list">
